@@ -1,19 +1,12 @@
 import { default as axios } from "axios";
-import index from "./store/index";
+import index from "../store/index";
 
-let uri = "http://localhost:3000/api/";
+const URI = "http://localhost:3000/api/";
 
-const axiosSc = ({
-  url,
-  data = {},
-  method = "POST",
-  header = {},
-  responseType = "json",
-  loader = false,
-}) => {
+const axiosEon = ({ url, data = {}, method = "POST", header = {}, responseType = "json", loader = false }) => {
   return new Promise((resolve, reject) => {
     let config = {
-      url: `${uri}${url}`,
+      url: `${URI}${url}`,
       method,
       data,
       headers: {
@@ -25,9 +18,7 @@ const axiosSc = ({
         return status >= 200 && status < 400;
       },
     };
-
-    // loader && index.commit("loadingState", null, { root: true });
-
+    loader && index.commit("loadingState", null, { root: true });
     axios(config)
       .then((res) => {
         resolve(res.data);
@@ -57,4 +48,4 @@ function error_console(form, error, data = null) {
   console.debug("-> Error:", form, error, data);
 }
 
-export default axiosSc;
+export default axiosEon;

@@ -1,25 +1,17 @@
-import Vue from "vue";
-import Vuex from "vuex";
-Vue.use(Vuex);
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-import usuario from "./modules/usuario";
+Vue.use(Vuex)
 
 export default new Vuex.Store({
-    state: {
-      empresa: "ACEB",
-      loading: false,
-    },
-    getters: {
-      stateLoading(state) {
-        return state.loading;
-      },
-    },
-    mutations: {
-      loadingState(state) {
-        state.loading = !state.loading;
-      },
-    },
-    modules: {
-      usuario,
-    },
-  });
+  state: {
+  },
+  getters: {
+  },
+  mutations: {
+  },
+  actions: {
+  },
+  modules: {
+  }
+})
