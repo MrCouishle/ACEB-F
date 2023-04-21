@@ -1,33 +1,33 @@
 export const $MENU = [
   {
     titulo: "Exito VIVA",
-    icon: "mdi-apps",
+    icon: "mdi-storefront",
     color: "primary",
     name_route: "/administracion",
   },
   {
     titulo: "Parqueadero Exito Viva",
-    icon: "mdi-car",
+    icon: "mdi-storefront",
     color: "primary",
     name_route: "/entradas",
   },
   {
     titulo: "Exito Unicentro",
-    icon: "mdi-car",
+    icon: "mdi-storefront",
     codigo: "MAES2",
     color: "primary",
     name_route: "/entradas",
   },
   {
     titulo: "Exito vecino doña luz",
-    icon: "mdi-car",
+    icon: "mdi-storefront",
     codigo: "MAES2",
     color: "primary",
     name_route: "/entradas",
   },
   {
     titulo: "Exito express san sebastian",
-    icon: "mdi-car",
+    icon: "mdi-storefront",
     codigo: "MAES2",
     color: "primary",
     name_route: "/entradas",

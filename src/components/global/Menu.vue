@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid align-stretch pa-0 d-flex flex-nowrap flex-row style="height: 100vh">
-    <v-navigation-drawer permanent>
+  <v-container fluid align-stretch pa-0 d-flex flex-nowrap flex-row style="height: 100vh" class="custom-drawer">
+    <v-navigation-drawer class=" custom-drawer">
       <v-flex d-flex class="flex-column" fill-height>
         <div style="align-items: center">
           <v-img
@@ -82,8 +82,8 @@
             <v-list nav dense class="mb-auto flex-grow-1">
               <v-list-item-group v-model="active.conf_logout" color="primary">
                 <v-list-item v-if="usuario.nivel_usuario == 'SP'" @click="estado_config_usu = true">
-                  <v-list-item-icon class="mr-3">
-                    <v-icon> settings </v-icon>
+                  <v-list-item-icon class="ml-7 mr-3">
+                    <v-icon> mdi-cog-outline </v-icon>
                   </v-list-item-icon>
 
                   <v-list-item-content>
@@ -91,8 +91,8 @@
                   </v-list-item-content>
                 </v-list-item>
                 <v-list-item @click="validarSalir">
-                  <v-list-item-icon class="mr-3">
-                    <v-icon> logout </v-icon>
+                  <v-list-item-icon class="ml-7 mr-3">
+                    <v-icon> mdi-logout </v-icon>
                   </v-list-item-icon>
 
                   <v-list-item-content>
@@ -151,9 +151,7 @@ export default {
     cerrarConfiguracion() {
       this.estado_config_usu = false;
     },
-    validarSalir() {
-      this.alertaModal_(["04", "warning", "", this._$postLogout]);
-    },
+
   },
 };
 </script>
@@ -170,5 +168,8 @@ export default {
 .menu-container {
   position: fixed;
   height: 100%;
+}
+.custom-drawer {
+  border-radius: 10px; /* Establecer el radio de borde deseado */
 }
 </style>
